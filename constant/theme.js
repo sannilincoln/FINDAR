@@ -19,7 +19,6 @@ const FONT = {
   thin: "Roboto_300Light",
   regular: "Roboto_400Regular",
   medium: "Roboto_500Medium",
-  semiBold: "Montserrat_600SemiBold",
   bold: "Roboto_700Bold",
 };
 

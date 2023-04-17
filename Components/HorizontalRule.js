@@ -19,17 +19,19 @@ export default HorizontalRule
 const styles = StyleSheet.create({
 container:{
     flexDirection:'row',
-    alignItems:'center'
+    alignItems:'center',
+    marginVertical:15
 },
 rule:{
     height: 3,
     width: 159,
     borderRadius:1,
-    backgroundColor:COLORS.gray
+    backgroundColor:COLORS.lilac
 
 },
 or:{
     marginHorizontal:10,
+    color:COLORS.textBlack,
     fontFamily:FONT.regular
 
 

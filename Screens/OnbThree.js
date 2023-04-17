@@ -4,6 +4,7 @@ import Layout from '../Components/Layout'
 import { COLORS,FONT } from '../constant/theme'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'; 
+import BigButton from '../Components/BigButton'
 
 
 const OnbThree = () => {
@@ -19,25 +20,20 @@ const OnbThree = () => {
            <View style={styles.dotGroup}>
                 <View style={styles.dotPurple}/>
                 <View style={styles.dotPurple}/>
-                <View style={styles.dotGray}/>
+                <View style={styles.dotPurple}/>
             </View>
             
-            <View style={{flexDirection:'row',justifyContent:'space-between'} }>
-                <TouchableOpacity
-                 style={{marginTop:25,alignSelf:'center'}} 
+            <TouchableOpacity
+                 style={{marginVertical:15,alignSelf:'center'}} 
                 onPress={()=> navigation.navigate('Onboarding Two')}
                 >
                 <Ionicons   name="arrow-back-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
+                
 
-                <TouchableOpacity
-                 style={{marginTop:25,alignSelf:'center'}} 
-                onPress={()=> navigation.navigate('Onboarding Two')}
-                >
-                <Ionicons   name="arrow-forward-circle" size={60} color={COLORS.purple} />
-                </TouchableOpacity>
-
-            </View>
+                <BigButton
+                title={'Get Started'}
+                />
 
     </Layout>
    

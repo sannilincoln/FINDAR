@@ -19,10 +19,10 @@ export default BigButton
 
 const styles = StyleSheet.create({
 container:{
-    height:72,
-    width:350,
+    height:48,
+    width:352,
     borderRadius:10,
-    backgroundColor:COLORS.green,
+    backgroundColor:COLORS.purple,
     alignItems:'center',
     justifyContent:'center',
     shadowColor: "#037F00",
@@ -38,8 +38,8 @@ container:{
    
 },
 Txt:{
-  fontSize:14,
-fontFamily:FONT.semiBold,
+  fontSize:16,
+fontFamily:FONT.medium,
 color:COLORS.white
 }
 })

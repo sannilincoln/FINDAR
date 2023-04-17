@@ -4,7 +4,7 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const BigButtonWhite = ({title,onPress}) => {
+const BigButtonOutline = ({title,onPress}) => {
   return (
     <TouchableOpacity
     onPress={onPress}
@@ -15,31 +15,26 @@ const BigButtonWhite = ({title,onPress}) => {
   )
 }
 
-export default BigButtonWhite
+export default BigButtonOutline
 
 const styles = StyleSheet.create({
 container:{
-    height:72,
-    width:350,
+    height:48,
+    width:352,
     borderRadius:10,
     backgroundColor:COLORS.white,
     alignItems:'center',
     justifyContent:'center',
-    shadowColor: "#037F00",
+    // shadowColor: "#037F00",
     margin:15,
-        shadowOffset: {
-            width: 0,
-            height: 3,
-        },
-        shadowOpacity: 0.27,
-        shadowRadius: 4.65,
-
-        elevation: 6,
+    borderWidth:1,
+    borderColor:COLORS.purple,
+       
    
 },
 Txt:{
   // fontSize:14,
 fontFamily:FONT.semiBold,
-color:COLORS.green
+color:COLORS.purple
 }
 })
