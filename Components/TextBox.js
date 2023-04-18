@@ -6,17 +6,19 @@ import { Ionicons } from '@expo/vector-icons';
 import {FONT,COLORS} from '../constant/theme'
 
 
-const TextBox = ({placeholder,icon, htext,text,onChangeText}) => {
+const TextBox = ({placeholder,extContStyle, htext,text,onChangeText}) => {
   return (
-    <View style={{marginTop:15}}>
+    <View style={[styles.container,extContStyle]}>
     {/* <Ionicons name={icon} size={20} color="#333333"  margin={4}/> */}
     <Text style={styles.txtbox}>{htext}</Text>
+    <View style={styles.textB}>
         <TextInput
         placeholder={placeholder}
         onChangeText={onChangeText}
         value={text}
-        style={styles.textB}
+        style={{height:50,width:352}}
         />
+    </View>
     </View>
   )
 }
@@ -24,16 +26,17 @@ const TextBox = ({placeholder,icon, htext,text,onChangeText}) => {
 export default TextBox
 
 const styles = StyleSheet.create({
-textB:{
-  height:60,
+  container:{
+    marginTop:15,
+    
+  },
+  textB:{
+  height:50,
   width:352,
   borderWidth:1,
   borderColor:COLORS.purple,
-  backgroundColor:COLORS.white,
-  flexDirection:'row',
-  alignItems:'center',
   borderRadius:10,
-  marginTop:5,
+  marginTop:3,
   paddingHorizontal:16,
   
 },
@@ -43,6 +46,7 @@ txtbox:{
   fontFamily:FONT.regular,
   color:COLORS.textBlack,
   fontSize: 16,
+  marginHorizontal:3,
 }
 
 })

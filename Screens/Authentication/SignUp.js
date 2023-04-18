@@ -40,28 +40,33 @@ const SignUp = () => {
         
         
         <BigButton
-        title={'Sign in'}
+        title={'Sign Up'}
         onPress={() => navigation.navigate('Menu')}
         />
 
-        <HorizontalRule/>
+        <HorizontalRule
+        extContStyle={{marginVertical:5}}
+        />
 
         <BigButtonOutline
         title={'Sign In with Google'}
         imgsrc={require('../../assets/Icons/google.png')}
+        extContStyle={{margintop:5, height:48}}
         />
         <BigButtonOutline
         title={'Sign In with Facebook'}
         imgsrc={require('../../assets/Icons/facebook.png')}
+        extContStyle={{marginVertical:10, height:48}}
+
         />
 
         
         <TouchableOpacity style={{}}
         onPress={() => navigation.navigate('Sign Up')}
         >
-            <Text style={styles.txt}>Don’t have an account?   
+            <Text style={styles.txt}>Already have an account?   
 
-                <Text style={styles.signIn} >   Sign up</Text>
+                <Text style={styles.signIn} >  Sign In</Text>
             
             </Text>
 

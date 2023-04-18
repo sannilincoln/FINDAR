@@ -4,11 +4,11 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const BigButtonOutline = ({title,imgsrc,onPress}) => {
+const BigButtonOutline = ({title,imgsrc,onPress,extContStyle}) => {
   return (
     <TouchableOpacity
     onPress={onPress}
-    style={styles.container}>
+    style={[styles.container,extContStyle]}>
       <Text style={styles.Txt}>{title}</Text>
       <Image source={imgsrc}
       style={styles.img}

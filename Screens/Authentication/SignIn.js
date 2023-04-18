@@ -30,7 +30,7 @@ const SignIn = () => {
         
         
         <BigButton
-        title={'Sign in'}
+        title={'Sign In'}
         onPress={() => navigation.navigate('Menu')}
         />
 

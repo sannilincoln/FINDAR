@@ -2,11 +2,11 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 
-const Layout = ({children}) => {
+const Layout = ({children,extContStyle}) => {
   return (
 
     <SafeAreaView>
-    <View style={styles.container}>
+    <View style={[styles.container,extContStyle]}>
       {children}
     </View>
 

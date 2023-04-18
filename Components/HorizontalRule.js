@@ -4,9 +4,9 @@ import React from 'react'
 
 import {FONT,COLORS} from '../constant/theme'
 
-const HorizontalRule = () => {
+const HorizontalRule = ({extContStyle}) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,extContStyle]}>
         <View style={styles.rule}/>
       <Text style={styles.or}>or</Text>
         <View style={styles.rule}/>
