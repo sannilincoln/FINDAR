@@ -19,7 +19,7 @@ export default BigButton
 
 const styles = StyleSheet.create({
 container:{
-    height:48,
+    height:60,
     width:352,
     borderRadius:10,
     backgroundColor:COLORS.purple,

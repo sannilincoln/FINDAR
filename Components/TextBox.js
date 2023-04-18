@@ -25,7 +25,7 @@ export default TextBox
 
 const styles = StyleSheet.create({
 textB:{
-  height:48,
+  height:60,
   width:352,
   borderWidth:1,
   borderColor:COLORS.purple,

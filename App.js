@@ -1,10 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { useFonts,Roboto_300Light,Roboto_400Regular,Roboto_500Medium,Roboto_700Bold} from '@expo-google-fonts/roboto';
-import OnbOne from './Screens/OnbOne';
-import OnbTwo from './Screens/OnbTwo';
-import OnbThree from './Screens/OnbThree';
-import SignIn from './Screens/SignIn';
+
+import SignUp from './Screens/Authentication/SignUp';
 
 
 export default function App() {
@@ -14,7 +12,7 @@ export default function App() {
   } else {
   return (
   
-  <SignIn/>
+  <SignUp/>
   
   );
 }

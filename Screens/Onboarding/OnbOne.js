@@ -1,46 +1,44 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import Layout from '../Components/Layout'
-import { COLORS,FONT } from '../constant/theme'
+import Layout from '../../Components/Layout'
+import { COLORS,FONT } from '../../constant/theme'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'; 
-import BigButton from '../Components/BigButton'
 
 
-const OnbThree = () => {
+const OnbOne = () => {
   return (
     <Layout>
-        
+        <TouchableOpacity>
 
-        <Image source={require('../assets/onb3.png')}
+        <Text style={styles.txt}>Skip</Text>
+        </TouchableOpacity>
+
+        <Image source={require('../assets/onb1.png')}
         style={styles.img}
         />
-        <Text style={styles.btxt}>Tested and trusted secure method to get top notch artisans</Text>
+        <Text style={styles.btxt}>Get skilled and trained professionlas to handle your jobs without stress</Text>
 
            <View style={styles.dotGroup}>
                 <View style={styles.dotPurple}/>
-                <View style={styles.dotPurple}/>
-                <View style={styles.dotPurple}/>
+                <View style={styles.dotGray}/>
+                <View style={styles.dotGray}/>
             </View>
             
-            <TouchableOpacity
-                 style={{marginVertical:15,alignSelf:'center'}} 
+                <TouchableOpacity
+                 style={{marginTop:25,alignSelf:'center'}} 
                 onPress={()=> navigation.navigate('Onboarding Two')}
-                >
-                <Ionicons   name="arrow-back-circle" size={60} color={COLORS.purple} />
-                </TouchableOpacity>
-                
+>
 
-                <BigButton
-                title={'Get Started'}
-                />
+                <Ionicons   name="arrow-forward-circle" size={60} color={COLORS.purple} />
+                </TouchableOpacity>
 
     </Layout>
    
   )
 }
 
-export default OnbThree
+export default OnbOne
 
 const styles = StyleSheet.create({
   txt:{

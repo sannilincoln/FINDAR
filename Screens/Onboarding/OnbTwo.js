@@ -1,12 +1,12 @@
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
-import Layout from '../Components/Layout'
-import { COLORS,FONT } from '../constant/theme'
+import Layout from '../../Components/Layout'
+import { COLORS,FONT } from '../../constant/theme'
 import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'; 
 
 
-const OnbOne = () => {
+const OnbTwo = () => {
   return (
     <Layout>
         <TouchableOpacity>
@@ -14,31 +14,40 @@ const OnbOne = () => {
         <Text style={styles.txt}>Skip</Text>
         </TouchableOpacity>
 
-        <Image source={require('../assets/onb1.png')}
+        <Image source={require('../assets/onb2.png')}
         style={styles.img}
         />
-        <Text style={styles.btxt}>Get skilled and trained professionlas to handle your jobs without stress</Text>
+        <Text style={styles.btxt}>Discover the closest skilled artisan with the aid of FINDAR </Text>
 
            <View style={styles.dotGroup}>
                 <View style={styles.dotPurple}/>
-                <View style={styles.dotGray}/>
+                <View style={styles.dotPurple}/>
                 <View style={styles.dotGray}/>
             </View>
             
+            <View style={{flexDirection:'row',justifyContent:'space-between'} }>
                 <TouchableOpacity
                  style={{marginTop:25,alignSelf:'center'}} 
                 onPress={()=> navigation.navigate('Onboarding Two')}
->
+                >
+                <Ionicons   name="arrow-back-circle" size={60} color={COLORS.purple} />
+                </TouchableOpacity>
 
+                <TouchableOpacity
+                 style={{marginTop:25,alignSelf:'center'}} 
+                onPress={()=> navigation.navigate('Onboarding Two')}
+                >
                 <Ionicons   name="arrow-forward-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
+
+            </View>
 
     </Layout>
    
   )
 }
 
-export default OnbOne
+export default OnbTwo
 
 const styles = StyleSheet.create({
   txt:{
