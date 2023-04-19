@@ -83,7 +83,7 @@ const SearchResult = () => {
            />
            <Card
            image={require('../../assets/tailor.png')}
-           cardName={'Jane Fashion Home'}
+           cardName={'Jane Fashion Home'} 
             location={'500m Away'}
             cardtxt={'affordable haircut from the comfort of your home'}
             price={'500'}

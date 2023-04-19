@@ -12,6 +12,15 @@ import VerifyOtpPin from './Screens/Authentication/VerifyOtpPin';
 import VerifySuccessful from './Screens/Authentication/VerifySuccessful';
 import HomePage from './Screens/Home/HomePage';
 import SearchResult from './Screens/Home/SearchResult';
+import ArtisanPortfolio from './Screens/Home/ArtisanPortfolio';
+import Map from './Screens/Home/Map';
+import Profile from './Screens/Profile/Profile';
+import Settings from './Screens/Profile/Settings';
+import RetrievePw from './Screens/Profile/RetrievePw';
+import CallBox from './Screens/Call/CallBox';
+import CallBoxTwo from './Screens/Call/CallBoxTwo';
+import ChatBox from './Screens/Call/ChatBox';
+import ChatMessages from './Screens/Call/ChatMessages';
 
 
 export default function App() {
@@ -21,7 +30,7 @@ export default function App() {
   } else {
   return (
   
-  <SearchResult/>
+  <ChatMessages/>
   
   );
 }

@@ -12,7 +12,9 @@ const COLORS ={
         gray:'#ADADAD',
         error:'#FA5E5E',
         darkTheme:'#282828',
-        correct:'#5DD752'
+        green:'#5DD752',
+        pwhite:'#FFFFFF',
+        pblack:'#000000',
 }
 
 const FONT = {

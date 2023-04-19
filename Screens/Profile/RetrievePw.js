@@ -6,25 +6,35 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const CreateNewPassword = () => {
+const RetrievePw = () => {
   return (
+      
+    <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout 
-    extContStyle={{justifyContent:'center',alignItems:'center'}}
+    extContStyle={{justifyContent:'center',alignItems:'center',}}
     >
         <Image source={require('../../assets/FINDAR.png')}
         style={{marginVertical:15, alignSelf:'flex-start'}}
         />
-        <Text style={styles.htxt}>Create New Password</Text>
+        <Text style={styles.htxt}>Change Password</Text>
+
+        <TextBox
+        htext={'Old Password'}
+        placeholder={'*************'}
+        />
+
+        <View
+        style={{marginBottom:10}}
+        />
 
         <TextBox
         htext={'New Password'}
         placeholder={'*************'}
         />
-        <Text style={{alignSelf:'flex-start',marginVertical:5}}>Password should contain at least 8 characters </Text>
-
+                <Text style={{alignSelf:'flex-start',marginVertical:5}}>Password should contain at least 8 characters </Text>
 
         <View
-        style={{marginBottom:30}}
+        style={{marginBottom:10}}
         />
 
         <TextBox
@@ -33,7 +43,7 @@ const CreateNewPassword = () => {
         />
 
         <View
-        style={{marginBottom:50}}
+        style={{marginBottom:20}}
         />
         <BigButton
         title={'Create New Password'}
@@ -41,10 +51,11 @@ const CreateNewPassword = () => {
 
 
     </Layout>
+    </View>
   )
 }
 
-export default CreateNewPassword
+export default RetrievePw
 
 const styles = StyleSheet.create({
     htxt:{
