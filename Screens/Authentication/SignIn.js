@@ -35,7 +35,7 @@ const SignIn = ({navigation}) => {
         
         <BigButton
         title={'Sign In'}
-        onPress={() => navigation.navigate('HomeTabNav')}
+        onPress={() => navigation.navigate('HomeStackNav')}
         />
 
         <HorizontalRule/>

@@ -6,6 +6,8 @@ import Map from '../Screens/Home/Map';
 import ChatMessages from '../Screens/Call/ChatMessages';
 import CallBox from '../Screens/Call/CallBox';
 import CallStackNav from './CallStackNav';
+import HomeTabNav from './HomeTabNav';
+import CallBoxTwo from '../Screens/Call/CallBoxTwo';
 
 
 const HomeStackNav = () => {
@@ -13,11 +15,12 @@ const HomeStackNav = () => {
 
   return (
     <Stack.Navigator>
-              <Stack.Screen name="HomePage" component={HomePage}options={{headerShown:false}}/>
+              <Stack.Screen name="HomeTabNav" component={HomeTabNav}options={{headerShown:false}}/>
               <Stack.Screen name="ArtisanPortfolio" component={ArtisanPortfolio}options={{headerShown:false}}/>
               <Stack.Screen name="Map" component={Map}options={{headerShown:false}}/>
-              {/* <Stack.Screen name="CallStackNav" component={CallStackNav}options={{headerShown:false}}/> */}
-              
+                <Stack.Screen name="ChatMessages" component={ChatMessages}options={{headerShown:false}}/>
+                <Stack.Screen name="CallBox" component={CallBox}options={{headerShown:false}}/>
+                <Stack.Screen name="CallBoxTwo" component={CallBoxTwo}options={{headerShown:false}}/>
     </Stack.Navigator>
   )
 }

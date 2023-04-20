@@ -88,7 +88,7 @@ const ArtisanPortfolio = ({navigation}) => {
             <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20, marginVertical:20}}
             >
                 <TouchableOpacity style={{width:127,height:48, backgroundColor:COLORS.purple,borderRadius:8,alignItems:'center',justifyContent:'center'}}
-                            onPress={() => navigation.navigate('CallBox')}
+                            onPress={() => navigation.navigate('CallBoxTwo')}
 
                 >
                     <Text style={{color:COLORS.white,fontFamily:FONT.medium, fontSize:16}}>Call</Text>

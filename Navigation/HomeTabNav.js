@@ -18,7 +18,7 @@ const HomeTabNav = (navigation) => {
 
   return (
     <Tab.Navigator
-    initialRouteName="HomeStackNav"
+    initialRouteName="HomePage"
      screenOptions={{
     activeTintColor: COLORS.white,
     inactiveTintColor: COLORS.lilac,
@@ -28,7 +28,7 @@ const HomeTabNav = (navigation) => {
    
      }}
     >
-        <Tab.Screen name="HomeStackNav" component={HomeStackNav} options={{
+        <Tab.Screen name="HomePage" component={HomePage} options={{
       // title: "Home",
       
       headerShown: false,

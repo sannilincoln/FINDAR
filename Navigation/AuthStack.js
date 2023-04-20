@@ -33,7 +33,7 @@ const AuthStack = ({navigation}) => {
               <Stack.Screen name="VerifyOtpOne" component={VerifyOtpOne}options={{headerShown:false}}/>
               <Stack.Screen name="VerifyOtpPin" component={VerifyOtpPin}options={{headerShown:false}}/>
               <Stack.Screen name="VerifySuccessful" component={VerifySuccessful}options={{headerShown:false}}/>
-              <Stack.Screen name="HomeTabNav" component={HomeTabNav}options={{headerShown:false}}/>
+              <Stack.Screen name="HomeStackNav" component={HomeStackNav}options={{headerShown:false}}/>
               {/* <Stack.Screen name="DrawerNav" component={DrawerNav}options={{headerShown:false}}/> */}
              
       
