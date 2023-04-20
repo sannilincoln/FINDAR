@@ -6,7 +6,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import ChatCard from '../../Components/ChatCard';
 
 
-const ChatBox = () => {
+const ChatBox = ({navigation}) => {
   return (
         <View style={{backgroundColor:COLORS.white,flex:1}}>
 
@@ -14,7 +14,8 @@ const ChatBox = () => {
             <View 
             style={{flexDirection:'row', alignItems:'center',gap:10,}}>
             <TouchableOpacity
-                            style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.white,alignItems:'center',justifyContent:'center'}}
+             style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.white,alignItems:'center',justifyContent:'center'}}
+            onPress={() => navigation.goBack()}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
             </TouchableOpacity>

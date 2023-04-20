@@ -8,6 +8,7 @@ import CallBox from '../Screens/Call/CallBox';
 import CallStackNav from './CallStackNav';
 import HomeTabNav from './HomeTabNav';
 import CallBoxTwo from '../Screens/Call/CallBoxTwo';
+import DrawerNav from './DrawerNav';
 
 
 const HomeStackNav = () => {
@@ -15,7 +16,7 @@ const HomeStackNav = () => {
 
   return (
     <Stack.Navigator>
-              <Stack.Screen name="HomeTabNav" component={HomeTabNav}options={{headerShown:false}}/>
+              <Stack.Screen name="DrawerNav" component={DrawerNav}options={{headerShown:false}}/>
               <Stack.Screen name="ArtisanPortfolio" component={ArtisanPortfolio}options={{headerShown:false}}/>
               <Stack.Screen name="Map" component={Map}options={{headerShown:false}}/>
                 <Stack.Screen name="ChatMessages" component={ChatMessages}options={{headerShown:false}}/>

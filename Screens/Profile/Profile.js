@@ -5,7 +5,8 @@ import { COLORS, FONT } from '../../constant/theme'
 import { Octicons } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-const Profile = () => {
+
+const Profile = ({navigation}) => {
   return (
    
     <View style={{flex:1,backgroundColor:COLORS.white}}>
@@ -13,11 +14,12 @@ const Profile = () => {
         style={{width:'100%',height:184,backgroundColor:COLORS.purple}}
         />
         <View style={{flexDirection:'row', gap:10, position:'absolute', top:45,left:20,alignItems:'center' }}>
-            <View
+            <TouchableOpacity
                 style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.pwhite,alignItems:'center',justifyContent:'center'}}
+                onPress={()=>navigation.goBack()}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
-            </View>
+            </TouchableOpacity>
             <Text style={{fontFamily:FONT.bold,color:COLORS.pwhite,}}>My Profile</Text>
         </View>
 

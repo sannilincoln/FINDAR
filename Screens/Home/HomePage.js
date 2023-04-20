@@ -14,7 +14,7 @@ const HomePage = ({navigation}) => {
     <SafeAreaView>
         <View style={{flexDirection:'row', justifyContent:'space-between', marginHorizontal:15, marginTop:25,marginBottom:15}}>
             <TouchableOpacity style={{flexDirection:'row',alignItems:'center',gap:15}}
-            onPress={() => {console.log('pressed')}}
+            onPress={()=>{navigation.toggleDrawer()}}
             >
                 <Image source={require('../../assets/profile.png')}/>
                 <Text style={{fontFamily:FONT.regular,fontSize:16,color:COLORS.textBlack}}>Hi, Praise</Text>

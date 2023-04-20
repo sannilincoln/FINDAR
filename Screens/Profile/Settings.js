@@ -8,7 +8,7 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 
 
-const Settings = () => {
+const Settings = ({navigation}) => {
   return (
    
     <View style={{flex:1,backgroundColor:COLORS.white}}>
@@ -18,6 +18,7 @@ const Settings = () => {
         <View style={{flexDirection:'row', gap:10, position:'absolute', top:45,left:20,alignItems:'center' }}>
             <TouchableOpacity
                             style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.pwhite,alignItems:'center',justifyContent:'center'}}
+                            onPress={()=>navigation.goBack()}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
             </TouchableOpacity>
@@ -91,10 +92,12 @@ const Settings = () => {
                     <Image source={require('../../assets/Icons/lock.png')}/>
                     <Text style={{fontFamily:FONT.regular,color:COLORS.textBlack,}}>Password</Text>
                 </View>
-                <View style={{flexDirection:'row',gap:10,alignItems:'center'}}>
+                <TouchableOpacity style={{flexDirection:'row',gap:10,alignItems:'center'}}
+                 onPress={()=>navigation.navigate('RetrievePw')}
+                >
                     <Text style={{fontFamily:FONT.regular,color:COLORS.gray,fontSize:13.33, alignSelf:'center', }}>Change Password</Text>
                      <Image source={require('../../assets/Icons/caretRight.png')}/>
-                </View>
+                </TouchableOpacity>
                 </View>
                 </View>
 

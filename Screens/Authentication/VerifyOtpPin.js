@@ -33,7 +33,7 @@ const VerifyOtpPin = ({navigation}) => {
         style={{marginBottom:0}}
         /> */}
         <BigButton
-        onPress={()=> navigation.navigate('HomeTabNav')}
+        onPress={()=> navigation.navigate('HomeStackNav')}
         title={'Verify'}
         />
 

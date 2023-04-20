@@ -6,7 +6,7 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const RetrievePw = () => {
+const RetrievePw = ({navigation}) => {
   return (
       
     <View style={{backgroundColor:COLORS.white,flex:1}}>
@@ -46,6 +46,7 @@ const RetrievePw = () => {
         style={{marginBottom:20}}
         />
         <BigButton
+        onPress={() => navigation.navigate('Profile')}
         title={'Create New Password'}
         />
 
