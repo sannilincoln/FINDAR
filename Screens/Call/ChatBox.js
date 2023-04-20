@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity,  View } from 'react-native'
 import React from 'react'
 import { COLORS, FONT } from '../../constant/theme'
 import TextBox from '../../Components/TextBox'
@@ -32,13 +32,21 @@ const ChatBox = ({navigation}) => {
         extContStyle={{marginTop:90, marginHorizontal:20}}
         />
 
+        <Pressable
+        onPress={()=>navigation.navigate('ChatMessages')}
+        >
         <ChatCard
         image={require('../../assets/tailor.png')}
         bussinessname={'Jane Fashion Home'}
         chat={'Can you come around tomorrow?'}
         time={'8:45am'}
         />
+        </Pressable>
+        
 
+        <Pressable
+        onPress={()=>navigation.navigate('ChatMessages')}
+        >
         <ChatCard
         image={require('../../assets/barber.png')}
         bussinessname={'John The Barder'}
@@ -46,26 +54,41 @@ const ChatBox = ({navigation}) => {
         time={'Yesterday'}
         extOnline={{backgroundColor:COLORS.gray}}
         />
+        </Pressable>
+
+
+        <Pressable
+        onPress={()=>navigation.navigate('ChatMessages')}>
         <ChatCard
         image={require('../../assets/spa.png')}
         bussinessname={'Oyin’s Hairmpire'}
         chat={'When will you be available to rela.....'}
         time={'19/08/22'}
         />
+        </Pressable>
+
+
+        <Pressable
+        onPress={()=>navigation.navigate('ChatMessages')}>
+
         <ChatCard
         image={require('../../assets/plumber.png')}
         bussinessname={'Everything Plumbing'}
         chat={'It is a pleasure doing business wi.......'}
         time={'15/08/22'}
                 extOnline={{backgroundColor:COLORS.gray}}
-
         />
+        </Pressable>
+
+        <Pressable
+        onPress={()=>navigation.navigate('ChatMessages')}>
         <ChatCard
         image={require('../../assets/shoemaker.png')}
         bussinessname={'Shoe Affairs'}
         chat={'Shoe Affairs'}
         time={'12/08/22'}
         />
+        </Pressable>
       
          
 

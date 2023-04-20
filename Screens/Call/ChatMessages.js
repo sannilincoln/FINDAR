@@ -6,13 +6,14 @@ import ChatViewReceiver from '../../Components/ChatViewReceiver'
 import ChatViewSenderImg from '../../Components/ChatViewSenderImg'
 import ChatTxtBox from '../../Components/ChatTxtBox'
 
-const ChatMessages = () => {
+const ChatMessages = ({navigation}) => {
   return (
      <View style={{backgroundColor:COLORS.white,flex:1}}>
 
         <View style={{flexDirection:'row', alignItems:'center',marginLeft:20, marginTop:40, gap:20}}>
                 <TouchableOpacity
                             style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.white,alignItems:'center',justifyContent:'center'}}
+                            onPress={() => navigation.goBack()}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
             </TouchableOpacity>

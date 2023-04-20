@@ -4,13 +4,14 @@ import { COLORS, FONT } from '../../constant/theme'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { SimpleLineIcons } from '@expo/vector-icons';
 
-const CallBoxTwo = () => {
+const CallBoxTwo = ({navigation}) => {
   return (
         <View style={{backgroundColor:COLORS.white,flex:1}}>
 
           <View style={{flexDirection:'row', gap:100, position:'absolute', top:60,left:20,alignItems:'center' }}>
             <TouchableOpacity
                             style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.white,alignItems:'center',justifyContent:'center'}}
+                          onPress={()=>navigation.goBack()}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
             </TouchableOpacity>

@@ -1,4 +1,4 @@
-import { Image,  ScrollView,  StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Image,  Pressable,  ScrollView,  StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, FONT } from '../../constant/theme'
@@ -72,7 +72,7 @@ const HomePage = ({navigation}) => {
         
         <ScrollView>
             <View style={{gap:10}}>
-            <TouchableOpacity
+            <Pressable
             onPress={() => navigation.navigate('ArtisanPortfolio')}
             >
            <Card
@@ -84,10 +84,10 @@ const HomePage = ({navigation}) => {
             favImg={require('../../assets/Icons/heart.png')}
             extxtStyle={{color:COLORS.pwhite}}
            />
-           </TouchableOpacity>
+           </Pressable>
 
 
-            <TouchableOpacity
+            <Pressable
             onPress={() => navigation.navigate('ArtisanPortfolio')}
             >
            <Card
@@ -99,10 +99,10 @@ const HomePage = ({navigation}) => {
              extxtStyle={{color:COLORS.pwhite}}
              favImg={require('../../assets/Icons/heart.png')}
            />
-              </TouchableOpacity>
+              </Pressable>
 
 
-             <TouchableOpacity
+             <Pressable
             onPress={() => navigation.navigate('ArtisanPortfolio')}
             >
            <Card
@@ -114,9 +114,9 @@ const HomePage = ({navigation}) => {
             extxtStyle={{color:COLORS.pwhite}}
               favImg={require('../../assets/Icons/heart.png')}
            />
-                </TouchableOpacity>
+                </Pressable>
 
-            <TouchableOpacity
+            <Pressable
             onPress={() => navigation.navigate('ArtisanPortfolio')}
             >
            <Card
@@ -128,7 +128,7 @@ const HomePage = ({navigation}) => {
            extxtStyle={{color:COLORS.pwhite}}
           favImg={require('../../assets/Icons/heart.png')}
            />
-           </TouchableOpacity>
+           </Pressable>
 
             </View>
             </ScrollView>

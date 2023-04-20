@@ -1,10 +1,10 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { COLORS, FONT } from '../../constant/theme'
 import StarRating from '../../Components/StarRating'
 import Layout from '../../Components/Layout'
 
-const Map = () => {
+const Map = ({navigation}) => {
   return (
     
     <Layout 
@@ -43,13 +43,19 @@ const Map = () => {
         </View>
 
             
-            <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20, marginVertical:20}}>
-                <View style={{width:127,height:48, backgroundColor:COLORS.purple,borderRadius:8,alignItems:'center',justifyContent:'center'}}>
+            <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20, marginVertical:20}}
+            >
+                <TouchableOpacity style={{width:127,height:48, backgroundColor:COLORS.purple,borderRadius:8,alignItems:'center',justifyContent:'center'}}
+                            onPress={() => navigation.navigate('CallBoxTwo')}
+
+                >
                     <Text style={{color:COLORS.white,fontFamily:FONT.medium, fontSize:16}}>Call</Text>
-                </View>
-                <View style={{width:127,height:48, backgroundColor:COLORS.white,borderRadius:8,borderWidth:1,borderColor:COLORS.purple, alignItems:'center',justifyContent:'center'}}>
+                </TouchableOpacity>
+                <TouchableOpacity style={{width:127,height:48, backgroundColor:COLORS.white,borderRadius:8,borderWidth:1,borderColor:COLORS.purple, alignItems:'center',justifyContent:'center'}}
+                onPress={() => navigation.navigate('ChatMessages')}
+                >
                     <Text style={{color:COLORS.purple,fontFamily:FONT.medium, fontSize:16}}>chat</Text>
-                </View>
+                </TouchableOpacity>
             </View>
 </Layout>
     

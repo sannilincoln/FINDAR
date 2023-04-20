@@ -1,4 +1,4 @@
-import { Image,  ScrollView,  StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image,  ScrollView,  StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { COLORS, FONT } from '../../constant/theme'
@@ -6,17 +6,19 @@ import TextBox from '../../Components/TextBox'
 import CatButtons from '../../Components/CategoryButton'
 import Card from '../../Components/Card'
 
-const History = () => {
+const History = ({navigation}) => {
   return (
         <View style={{backgroundColor:COLORS.white,flex:1}}>
 
          <SafeAreaView>
         <View style={{flexDirection:'row', justifyContent:'space-between', marginHorizontal:15, marginTop:25,marginBottom:15}}>
-            <View style={{flexDirection:'row',alignItems:'center',gap:15}}>
+            <TouchableOpacity style={{flexDirection:'row',alignItems:'center',gap:15}}
+            onPress={()=>{navigation.toggleDrawer()}}
+            >
                 <Image source={require('../../assets/profile.png')}/>
                 <Text style={{fontFamily:FONT.regular,fontSize:16,color:COLORS.textBlack}}>Hi, Praise</Text>
 
-            </View>
+            </TouchableOpacity>
 
             <Image source={require('../../assets/Icons/bell.png')}/>
             
