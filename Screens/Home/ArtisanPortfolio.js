@@ -3,7 +3,7 @@ import React from 'react'
 import { COLORS, FONT } from '../../constant/theme'
 import StarRating from '../../Components/StarRating'
 
-const ArtisanPortfolio = () => {
+const ArtisanPortfolio = ({navigation}) => {
   return (
     <>
     <Image source={require('../../assets/artisan.png')}
@@ -13,12 +13,14 @@ const ArtisanPortfolio = () => {
 
         <View style={{flexDirection:'row', gap:10, position:'absolute', top:45,left:20,alignItems:'center' }}>
             <TouchableOpacity
+            onPress={()=>navigation.goBack()}
                             style={{width:26,height:25,borderRadius:13,backgroundColor:COLORS.pwhite,alignItems:'center',justifyContent:'center'}}
             >
                 <Image source={require('../../assets/Icons/arrowLeft.png')}/>
             </TouchableOpacity>
         </View>
 
+        
     <View
     style={styles.container}
     > 
@@ -42,13 +44,15 @@ const ArtisanPortfolio = () => {
                 </View>
                 <View>
                 <StarRating/>
-                <Text style={{color:COLORS.gray, fontsfontFamily:FONT.regular}}>50 Reviews</Text>
+                <Text style={{color:COLORS.gray,fontFamily:FONT.regular}}>50 Reviews</Text>
 
                 </View>
             </View>
-            <View style={{width:100,height:40,borderRadius:10,borderWidth:1,borderColor:COLORS.purple,alignItems:'center',justifyContent:'center' }}>
+            <TouchableOpacity style={{width:100,height:40,borderRadius:10,borderWidth:1,borderColor:COLORS.purple,alignItems:'center',justifyContent:'center' }}
+            onPress={() => navigation.navigate('Map')}
+            >
                 <Text style={{color:COLORS.purple,fontFamily:FONT.medium, fontSize:11.11}}>View on Map</Text>
-            </View>
+            </TouchableOpacity>
 
 
         </View>
@@ -81,13 +85,19 @@ const ArtisanPortfolio = () => {
                 <Image source={require('../../assets/Icons/caretdown.png')}/>
                 </View>
             
-            <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20, marginVertical:20}}>
-                <View style={{width:127,height:48, backgroundColor:COLORS.purple,borderRadius:8,alignItems:'center',justifyContent:'center'}}>
+            <View style={{flexDirection:'row',justifyContent:'space-between',marginHorizontal:20, marginVertical:20}}
+            >
+                <TouchableOpacity style={{width:127,height:48, backgroundColor:COLORS.purple,borderRadius:8,alignItems:'center',justifyContent:'center'}}
+                            onPress={() => navigation.navigate('CallBox')}
+
+                >
                     <Text style={{color:COLORS.white,fontFamily:FONT.medium, fontSize:16}}>Call</Text>
-                </View>
-                <View style={{width:127,height:48, backgroundColor:COLORS.white,borderRadius:8,borderWidth:1,borderColor:COLORS.purple, alignItems:'center',justifyContent:'center'}}>
+                </TouchableOpacity>
+                <TouchableOpacity style={{width:127,height:48, backgroundColor:COLORS.white,borderRadius:8,borderWidth:1,borderColor:COLORS.purple, alignItems:'center',justifyContent:'center'}}
+                onPress={() => navigation.navigate('ChatMessages')}
+                >
                     <Text style={{color:COLORS.purple,fontFamily:FONT.medium, fontSize:16}}>chat</Text>
-                </View>
+                </TouchableOpacity>
             </View>
 
     </>

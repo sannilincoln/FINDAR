@@ -15,13 +15,15 @@ export default function App() {
   } else {
   return (
       <NavigationContainer>
-      <AuthStack/>
+      <AuthStack>
+
+      </AuthStack>
+       <StatusBar style="auto" />
       
 
       {/* <DrawerNav/>   */}
 
 
-       <StatusBar style="auto" />
       </NavigationContainer>
   
   );

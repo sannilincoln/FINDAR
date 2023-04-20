@@ -72,37 +72,63 @@ const HomePage = ({navigation}) => {
         
         <ScrollView>
             <View style={{gap:10}}>
+            <TouchableOpacity
+            onPress={() => navigation.navigate('ArtisanPortfolio')}
+            >
            <Card
            image={require('../../assets/tailor.png')}
            cardName={'Jane Fashion Home'}
             location={'500m Away'}
             cardtxt={'affordable haircut from the comfort of your home'}
             price={'$100/hr'}
+            favImg={require('../../assets/Icons/heart.png')}
+            extxtStyle={{color:COLORS.pwhite}}
            />
+           </TouchableOpacity>
 
+
+            <TouchableOpacity
+            onPress={() => navigation.navigate('ArtisanPortfolio')}
+            >
            <Card
            image={require('../../assets/barber.png')}
            cardName={'Ayo the barber'}
             location={'500m Away'}
             cardtxt={'affordable haircut from the comfort of your home'}
             price={'$100/hr'}
+             extxtStyle={{color:COLORS.pwhite}}
+             favImg={require('../../assets/Icons/heart.png')}
            />
+              </TouchableOpacity>
 
+
+             <TouchableOpacity
+            onPress={() => navigation.navigate('ArtisanPortfolio')}
+            >
            <Card
            image={require('../../assets/furniture.png')}
            cardName={'Great Furniture'}
             location={'500m Away'}
             cardtxt={'affordable haircut from the comfort of your home'}
             price={'$100/hr'}
+            extxtStyle={{color:COLORS.pwhite}}
+              favImg={require('../../assets/Icons/heart.png')}
            />
+                </TouchableOpacity>
 
+            <TouchableOpacity
+            onPress={() => navigation.navigate('ArtisanPortfolio')}
+            >
            <Card
            image={require('../../assets/tailor.png')}
            cardName={'Jane Fashion Home'}
             location={'500m Away'}
             cardtxt={'affordable haircut from the comfort of your home'}
             price={'$100/hr'}
+           extxtStyle={{color:COLORS.pwhite}}
+          favImg={require('../../assets/Icons/heart.png')}
            />
+           </TouchableOpacity>
 
             </View>
             </ScrollView>

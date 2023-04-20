@@ -14,6 +14,7 @@ import VerifyOtpPin from '../Screens/Authentication/VerifyOtpPin';
 import VerifySuccessful from '../Screens/Authentication/VerifySuccessful';
 import HomeTabNav from './HomeTabNav';
 import DrawerNav from './DrawerNav';
+import HomeStackNav from './HomeStackNav';
 
 const AuthStack = ({navigation}) => {
     const Stack = createStackNavigator();
