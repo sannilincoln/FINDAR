@@ -6,15 +6,19 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'; 
 
 
-const OnbTwo = () => {
+const OnbTwo = ({navigation}) => {
   return (
+       <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout>
-        <TouchableOpacity>
+        <TouchableOpacity
+          onPress={()=> navigation.navigate('OnbThree')}
+
+        >
 
         <Text style={styles.txt}>Skip</Text>
         </TouchableOpacity>
 
-        <Image source={require('../assets/onb2.png')}
+        <Image source={require('../../assets/onb2.png')}
         style={styles.img}
         />
         <Text style={styles.btxt}>Discover the closest skilled artisan with the aid of FINDAR </Text>
@@ -28,14 +32,14 @@ const OnbTwo = () => {
             <View style={{flexDirection:'row',justifyContent:'space-between'} }>
                 <TouchableOpacity
                  style={{marginTop:25,alignSelf:'center'}} 
-                onPress={()=> navigation.navigate('Onboarding Two')}
+                onPress={()=> navigation.goBack()}
                 >
                 <Ionicons   name="arrow-back-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
 
                 <TouchableOpacity
                  style={{marginTop:25,alignSelf:'center'}} 
-                onPress={()=> navigation.navigate('Onboarding Two')}
+                   onPress={()=> navigation.navigate('OnbThree')}
                 >
                 <Ionicons   name="arrow-forward-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
@@ -43,7 +47,7 @@ const OnbTwo = () => {
             </View>
 
     </Layout>
-   
+   </View>
   )
 }
 

@@ -7,8 +7,10 @@ import BigButton from '../../Components/BigButton'
 import HorizontalRule from '../../Components/HorizontalRule'
 import BigButtonOutline from '../../Components/BigButtonOutline'
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
   return (
+        <View style={{backgroundColor:COLORS.white,flex:1}}>
+
     <Layout>
         <View style={{justifyContent:'center',alignItems:'center'}}>
 
@@ -26,23 +28,25 @@ const SignIn = () => {
         placeholder={'*************'}
          // icon={'md-lock-closed-outline'}
         />
-                <Text style={{alignSelf:'flex-end',marginVertical:5}}>Forgot password?</Text>
+                <Text style={{alignSelf:'flex-end',marginVertical:5}}
+                onPress={() => navigation.navigate('ForgotpwOne')}
+                >Forgot password?</Text>
         
         
         <BigButton
         title={'Sign In'}
-        onPress={() => navigation.navigate('Menu')}
+        onPress={() => navigation.navigate('HomeTabNav')}
         />
 
         <HorizontalRule/>
 
         <BigButtonOutline
         title={'Sign In with Google'}
-        imgsrc={require('../assets/Icons/google.png')}
+        imgsrc={require('../../assets/Icons/google.png')}
         />
         <BigButtonOutline
         title={'Sign In with Facebook'}
-        imgsrc={require('../assets/Icons/facebook.png')}
+        imgsrc={require('../../assets/Icons/facebook.png')}
         />
 
         
@@ -51,7 +55,9 @@ const SignIn = () => {
         >
             <Text style={styles.txt}>Don’t have an account?   
 
-                <Text style={styles.signIn} >   Sign up</Text>
+                <Text style={styles.signIn}
+                onPress={() => navigation.navigate('SignUp')}
+                 >   Sign up</Text>
             
             </Text>
 
@@ -60,6 +66,7 @@ const SignIn = () => {
         
 
     </Layout>
+    </View>
   )
 }
 

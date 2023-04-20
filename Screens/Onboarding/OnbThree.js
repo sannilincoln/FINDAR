@@ -7,12 +7,13 @@ import { Ionicons } from '@expo/vector-icons';
 import BigButton from '../../Components/BigButton'
 
 
-const OnbThree = () => {
+const OnbThree = ({navigation}) => {
   return (
+    <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout>
         
 
-        <Image source={require('../assets/onb3.png')}
+        <Image source={require('../../assets/onb3.png')}
         style={styles.img}
         />
         <Text style={styles.btxt}>Tested and trusted secure method to get top notch artisans</Text>
@@ -25,17 +26,19 @@ const OnbThree = () => {
             
             <TouchableOpacity
                  style={{marginVertical:15,alignSelf:'center'}} 
-                onPress={()=> navigation.navigate('Onboarding Two')}
+                onPress={()=> navigation.goBack()}
                 >
                 <Ionicons   name="arrow-back-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
                 
 
                 <BigButton
+                onPress={()=> navigation.navigate('SignIn')}
                 title={'Get Started'}
                 />
 
     </Layout>
+    </View>
    
   )
 }

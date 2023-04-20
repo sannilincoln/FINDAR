@@ -6,15 +6,18 @@ import { LinearGradient } from 'expo-linear-gradient'
 import { Ionicons } from '@expo/vector-icons'; 
 
 
-const OnbOne = () => {
+const OnbOne = ({navigation}) => {
   return (
+    <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout>
-        <TouchableOpacity>
+        <TouchableOpacity 
+        onPress={()=> navigation.navigate('OnbThree')}
+        >
 
         <Text style={styles.txt}>Skip</Text>
         </TouchableOpacity>
 
-        <Image source={require('../assets/onb1.png')}
+        <Image source={require('../../assets/onb1.png')}
         style={styles.img}
         />
         <Text style={styles.btxt}>Get skilled and trained professionlas to handle your jobs without stress</Text>
@@ -27,13 +30,14 @@ const OnbOne = () => {
             
                 <TouchableOpacity
                  style={{marginTop:25,alignSelf:'center'}} 
-                onPress={()=> navigation.navigate('Onboarding Two')}
->
+                onPress={()=> navigation.navigate('OnbTwo')}
+                  >
 
                 <Ionicons   name="arrow-forward-circle" size={60} color={COLORS.purple} />
                 </TouchableOpacity>
 
     </Layout>
+    </View>
    
   )
 }

@@ -6,8 +6,10 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const CreateNewPassword = () => {
+const CreateNewPassword = ({navigation}) => {
   return (
+          <View style={{backgroundColor:COLORS.white,flex:1}}>
+
     <Layout 
     extContStyle={{justifyContent:'center',alignItems:'center'}}
     >
@@ -36,11 +38,13 @@ const CreateNewPassword = () => {
         style={{marginBottom:50}}
         />
         <BigButton
+        onPress={()=> navigation.navigate('SignIn')}
         title={'Create New Password'}
         />
 
 
     </Layout>
+    </View>
   )
 }
 

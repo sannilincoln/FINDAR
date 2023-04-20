@@ -8,7 +8,7 @@ import { Entypo } from '@expo/vector-icons';
 
 
 
-const Card = ({image,price,cardName,cardtxt,location}) => {
+const Card = ({image, favImg,price,cardName,cardtxt,location,extxtStyle}) => {
   return (
     <View style={styles.contaner}>
       <View style={styles.foodCont}>
@@ -34,11 +34,13 @@ const Card = ({image,price,cardName,cardtxt,location}) => {
               </View>
           </View>
 
-          <Image source={require('../assets/Icons/heart.png')}
+          <Image source={favImg}
           style={{height:25,width: 25,position:'absolute',top:15,right:50}}
           />
           
-          <Text style={{fontSize:14,fontFamily:FONT.bold,color:COLORS.purple,position:'absolute',top:55,right:40}}>${price}/hr</Text>
+          <Text style={{fontSize:14,fontFamily:FONT.bold,color:COLORS.purple,position:'absolute',top:55,right:40}}>{price}</Text>
+
+          <Text style={[styles.text,extxtStyle]}>Pending</Text>
 
       </View>
          
@@ -106,6 +108,8 @@ rating:{
     // borderRadius:10,
     gap:10
  
-}
+},
+text:{fontFamily:FONT.regular,
+  fontSize:10,color:COLORS.green, position:'absolute',bottom:10,right:50}
   
 })

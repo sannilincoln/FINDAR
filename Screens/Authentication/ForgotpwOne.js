@@ -5,8 +5,10 @@ import { COLORS, FONT } from '../../constant/theme'
 import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 
-const ForgotpwOne = () => {
+const ForgotpwOne = ({navigation}) => {
   return (
+            <View style={{backgroundColor:COLORS.white,flex:1}}>
+
     <Layout 
     extContStyle={{justifyContent:'center',alignItems:'center'}}
     >
@@ -24,10 +26,12 @@ const ForgotpwOne = () => {
         style={{marginBottom:60}}
         />
         <BigButton
+        onPress={()=> navigation.navigate('ForgotpwTwo')}
         title={'Proceed'}
         />
 
     </Layout>
+    </View>
   )
 }
 

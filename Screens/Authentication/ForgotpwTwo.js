@@ -6,8 +6,9 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const ForgotpwTwo = () => {
+const ForgotpwTwo = ({navigation}) => {
   return (
+      <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout 
     extContStyle={{justifyContent:'center',alignItems:'center'}}
     >
@@ -31,12 +32,14 @@ const ForgotpwTwo = () => {
         style={{marginBottom:0}}
         /> */}
         <BigButton
+        onPress={()=> navigation.navigate('CreateNewPassword')}
         title={'Confirm'}
         />
            <Text style={{alignSelf:'flex-end',fontFamily:FONT.regular,color:COLORS.purple, marginVertical:5}}>Send code to email </Text>
 
 
     </Layout>
+    </View>
   )
 }
 

@@ -6,8 +6,9 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const VerifyOtpOne = () => {
+const VerifyOtpOne = ({navigation}) => {
   return (
+    <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout 
     extContStyle={{justifyContent:'center',alignItems:'center'}}
     >
@@ -31,12 +32,14 @@ const VerifyOtpOne = () => {
         style={{marginBottom:0}}
         /> */}
         <BigButton
+        onPress={()=> navigation.navigate('VerifyOtpPin')}
         title={'Verify'}
         />
            <Text style={{fontFamily:FONT.regular,color:COLORS.purple, marginVertical:5}}>Resend verification Code </Text>
 
 
     </Layout>
+    </View>
   )
 }
 

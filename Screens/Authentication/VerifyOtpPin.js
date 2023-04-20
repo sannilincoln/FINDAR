@@ -6,8 +6,10 @@ import TextBox from '../../Components/TextBox'
 import BigButton from '../../Components/BigButton'
 import OtpTextbox from '../../Components/OtpTextbox'
 
-const VerifyOtpPin = () => {
+const VerifyOtpPin = ({navigation}) => {
   return (
+        <View style={{backgroundColor:COLORS.white,flex:1}}>
+
     <Layout 
     extContStyle={{justifyContent:'center',alignItems:'center'}}
     >
@@ -31,11 +33,13 @@ const VerifyOtpPin = () => {
         style={{marginBottom:0}}
         /> */}
         <BigButton
+        onPress={()=> navigation.navigate('HomeTabNav')}
         title={'Verify'}
         />
 
 
     </Layout>
+    </View>
   )
 }
 

@@ -7,8 +7,9 @@ import BigButton from '../../Components/BigButton'
 import HorizontalRule from '../../Components/HorizontalRule'
 import BigButtonOutline from '../../Components/BigButtonOutline'
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
   return (
+        <View style={{backgroundColor:COLORS.white,flex:1}}>
     <Layout>
         <View style={{justifyContent:'center',alignItems:'center'}}>
 
@@ -41,7 +42,7 @@ const SignUp = () => {
         
         <BigButton
         title={'Sign Up'}
-        onPress={() => navigation.navigate('Menu')}
+        onPress={() => navigation.navigate('VerifyOtpOne')}
         />
 
         <HorizontalRule
@@ -66,7 +67,9 @@ const SignUp = () => {
         >
             <Text style={styles.txt}>Already have an account?   
 
-                <Text style={styles.signIn} >  Sign In</Text>
+                <Text style={styles.signIn}
+                onPress={() => navigation.navigate('SignIn')}
+                 >  Sign In</Text>
             
             </Text>
 
@@ -75,6 +78,7 @@ const SignUp = () => {
         
 
     </Layout>
+    </View>
   )
 }
 
